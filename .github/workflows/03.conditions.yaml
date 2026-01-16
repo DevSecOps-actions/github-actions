@@ -1,0 +1,36 @@
+name: inputs
+on:  # if we are using inputs then its a manual trigger
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
+      print_tags:
+        description: 'True to print to STDOUT'
+        required: true
+        type: boolean
+      tags:
+        description: 'Test scenario tags'
+        required: true
+        type: string
+      environment:
+        description: 'Environment to run tests against'
+        required: true
+        type: environment
+jobs:
+  inputs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: step 1
+        if: github.ref == 'refs/heads/feature-**'
+        run: echo "Hello World, I am from step 1"
+
+      - name: step 2
+        if: github.ref == 'refs/heads/main'
+        run: echo "Hello World, I am from step 2"
