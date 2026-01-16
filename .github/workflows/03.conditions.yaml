@@ -1,4 +1,4 @@
-name: inputs
+name: Conditions
 on:  # if we are using inputs then its a manual trigger
   workflow_dispatch:
     inputs:
