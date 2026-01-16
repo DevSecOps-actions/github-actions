@@ -6,3 +6,6 @@ jobs:
     steps:
       - name: step1
         run: echo "Hello World, I am from step 1"
+
+      - name: step2
+        run: echo "Hello World, I am from step 2"
