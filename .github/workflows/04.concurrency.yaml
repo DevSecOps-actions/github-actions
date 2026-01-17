@@ -2,7 +2,7 @@ name: Concurrency
 on: [push]
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }} # this workflow and this branch
-  cancel-in-progress: true
+  cancel-in-progress: true # cancels current pipeline which is inprogress
 jobs:
   build:
     runs-on: ubuntu-latest
