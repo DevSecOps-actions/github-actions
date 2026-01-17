@@ -1,0 +1,11 @@
+name: Checkout
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      
+      - name: display all files 
+        run: ls -la 
