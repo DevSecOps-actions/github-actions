@@ -24,7 +24,7 @@ on:
         required: true
         type: environment
 jobs:
-  inputs:
+  Inputs:
     runs-on: ubuntu-latest
     steps:
       - name: run command
