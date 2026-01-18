@@ -1,0 +1,8 @@
+name: self-hosted 
+on: [push]
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: hello world 
+        run: echo "Hello world, I am from self-hosted runner"
